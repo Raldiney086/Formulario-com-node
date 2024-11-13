@@ -1,0 +1,19 @@
+-- Database: banco_de_dados
+/*
+Primeiramente, deleta o banco de dados existente com o nome de "banco_de_dados"
+e crie um novo banco de dados com o nome "banco_de_dados"
+
+crie uma tabela executando o código abaixo
+*/
+
+
+DROP TABLE users;
+
+CREATE TABLE users(
+
+chave SERIAL PRIMARY KEY,
+email varchar(100),
+nome varchar(100),
+senha varchar(100)
+
+)

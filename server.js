@@ -7,10 +7,10 @@ const port = 3000;
 
 // Configuração do banco de dados Postgre
 const pool = new Pool({
-    user: 'postgres', 
+    user: 'postgres',
     host: 'localhost',
-    database: 'banco_de_dados', 
-    password: '2024', 
+    database: 'banco_de_dados',
+    password: '123',
     port: 5432,
 });
 
@@ -24,15 +24,16 @@ app.get('/', (req, res) => {
 
 // Rota para receber dados do formulário e inserir no banco de dados
 app.post('/submit', async (req, res) => {
-    const { name, email } = req.body;
+    const { nome, email, senha } = req.body;
 
     try {
-        const query = 'INSERT INTO users (name, email) VALUES ($1, $2)';
-        await pool.query(query, [name, email]);
-        res.send('Dados inseridos com sucesso!');
+        const query = `INSERT INTO users (nome, email,senha) VALUES ('${nome}','${email}','${senha}')`;
+        await pool.query(query);
+        res.send(`Dados inseridos com sucesso!` );
+       
     } catch (error) {
         console.error(error);
-        res.send('Erro ao inserir dados.');
+        res.send('Erro ao inserir dados.' , error);
     }
 });
 
