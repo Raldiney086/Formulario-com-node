@@ -4,29 +4,53 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Login</title>
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
 
-        <form action="/get" method="get">
+        <div>
+            <form action="/get" method="get">
+                <br><br>
 
-            <h1>Login</h1>
+                <h1>Login</h1>
+                <br>
 
-            <div>
+                <div>
 
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
 
-            </div>
+                </div>
 
-            <div>
-                <label for="senha">Senha:</label>
-                <input type="text" name="senha" id="senha" required>
-            </div>
-            
-            <button type="submit">Entrar</button>
-        </form>
-       <form action="/reg" method="get">
-        <button type="submit">Registrar</button>
-       </form>
+                <br>
+
+                <div>
+                    <label for="senha">Senha</label>
+                    <input type="text" name="senha" id="senha" required>
+                </div>
+
+                <div>
+
+                    <button type="submit">Entrar</button>
+
+                </div>
+
+            </form>
+
+
+            <br><br><br>
+
+
+
+
+            <form action="/reg" method="get">
+                <button class="registro" type="submit">Registrar</button>
+            </form>
+
+        </div>
+
     </body>
+
+
+    
 </html>
