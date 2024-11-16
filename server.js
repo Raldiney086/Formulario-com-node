@@ -22,7 +22,13 @@ app.get('/', (req, res) => {
 });
 
 app.post('/submit', async (req, res) => {
-    const { nome, email, senha } = req.body;
+   // const { nome, email, senha } = req.body;
+
+    const nome = req.body.nome
+    const email = req.body.email
+    const senha = req.body.senha
+
+    
 
     try {
         const query_consulta_email = `SELECT * FROM users WHERE email = $1`;
@@ -31,7 +37,7 @@ app.post('/submit', async (req, res) => {
         if (resultado.rows.length > 0) {
             console.log("Email já existe");
 
-            window.alert("Erro já esiste")
+            window.alert("Erro já esiste")  
             res.sendFile(__dirname + "/formulario.html");
 
         } else {
@@ -84,6 +90,9 @@ app.get('/reg',async (req,res)=>{
     res.sendFile(__dirname+'/registro.html')
 })
 
+
+
+//Executa o servidor pra ele rodar
 app.listen(port, () => {
     console.log(`Servidor rodando em http://localhost:${port}`);
 });
