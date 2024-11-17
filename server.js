@@ -22,12 +22,13 @@ app.get('/', (req, res) => {
 });
 
 app.post('/submit', async (req, res) => {
-   // const { nome, email, senha } = req.body;
+    const { nome, email, senha } = req.body;
 
-    const nome = req.body.nome
-    const email = req.body.email
-    const senha = req.body.senha
+    
 
+
+
+   
     
 
     try {
