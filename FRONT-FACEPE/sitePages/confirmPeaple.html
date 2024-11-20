@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../assets/style.css" />
+    <title>Confirmação</title>
+  </head>
+  <body>
+    <main class="confirm-Sheet">
+      <img src="../assets/images/photos/homem-placa.png" alt="" id="slideImg" />
+      <div class="confirm-section">
+        <img src="../assets/images/icons/Person.png" id="typeLog" />
+        <h1>Pessoa Física</h1>
+        <div class="conf-dados-container">
+          <form action="">
+            <div class="row1">
+              <input
+                id="nome-completo"
+                name="nome-completo"
+                type="text"
+                placeholder="Nome Completo"
+                required
+              />
+              <input
+                id="cpf"
+                name="cpf"
+                type="number"
+                placeholder="CPF"
+                minlength="11"
+                required
+              />
+            </div>
+            <div class="row2">
+              <input
+                id="e-mail"
+                name="e-mail"
+                type="email"
+                placeholder="E-mail"
+                required
+              />
+              <input
+                id="numero-contato"
+                name="numero-contato"
+                type="number"
+                placeholder="+ 55 | Número"
+                id="row2Acert"
+                minlength="8"
+                required
+              />
+            </div>
+            <div class="row3">
+              <input
+                id="cep"
+                name="cep"
+                type="number"
+                placeholder="CEP"
+                minlength="8"
+                required
+              />
+              <input
+                id="estado"
+                name="estado"
+                type="text"
+                placeholder="Estado"
+                required
+              />
+              <input
+                id="cidade"
+                name="cidade"
+                type="text"
+                placeholder="Cidade"
+                required
+              />
+              <input
+                id="logradouro"
+                name="logradouro"
+                type="text"
+                placeholder="Logradouro"
+                required
+              />
+              <input
+                id="numero-residencia"
+                name="numero-residencia"
+                type="number"
+                placeholder="Número"
+                required
+              />
+              <input
+                id="complemento"
+                name="complemento"
+                type="text"
+                placeholder="Complemento"
+                required
+              />
+            </div>
+            <div class="row4">
+              <input
+                id="senha"
+                name="senha"
+                type="password"
+                placeholder="Senha"
+                minlength="4"
+                required
+              />
+              <input
+                id="confirmar-senha"
+                name="confirmar-senha"
+                type="password"
+                placeholder="Confirmar Senha"
+                minlength="4"
+                required
+              />
+            </div>
+          </form>
+        </div>
+        <button type="submit" class="confirm-btn" id="submit-btnF">
+          Confirmar
+        </button>
+        <a href="ConfirmationCad.html"></a>
+        <img src="../assets/images/logo/logo.svg" id="logoConf" />
+      </div>
+    </main>
+
+    <script src="../../BACK-FACEPE/conexaoFront.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,1401 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+/*parametros gerais*/
+html {
+  font-family: "Montserrat", sans-serif;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+/*seção de cabeçalho*/
+.header-section {
+  margin: 0 0 auto 0;
+  width: 100vw;
+  height: 17dvh;
+  display: flex;
+  flex-direction: column;
+}
+.yelow-zone {
+  /*seção amarela do cabeçalho*/
+  height: 65%;
+  background-color: #fec200;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.267);
+  display: flex;
+  padding: 0 5dvw;
+  justify-content: space-between;
+  align-items: center;
+  & img {
+    cursor: pointer;
+  }
+  & #logoImg {
+    width: 150px;
+    height: auto;
+  }
+}
+.nav-zone {
+  /*Div com os links de navegação*/
+  height: 35%;
+  display: flex;
+  justify-content: end;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.267);
+  & ul {
+    margin: 0 5dvw;
+    height: 100%;
+    display: flex;
+    gap: 0 40px;
+    align-items: center;
+    & li {
+      list-style-type: none;
+      & a {
+        text-decoration: none;
+      }
+    }
+    & img {
+      cursor: pointer;
+    }
+    & #homeIcon {
+      width: 24px;
+      height: auto;
+    }
+    & #helpIcon {
+      width: 24px;
+      height: auto;
+    }
+  }
+}
+
+/*Conteudo principal - HOME*/
+
+.hero-section {
+  /*pagina inicial principal*/
+  width: 100vw;
+  height: 83vh;
+  & .img-Hero {
+    width: 100%;
+    height: 70%;
+    object-fit: cover;
+    z-index: 1;
+  }
+}
+
+/* Barra de pesquisa */
+.search-bar {
+  position: absolute;
+  top: 150px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+  border-radius: 15px;
+  padding: 5px 10px;
+  z-index: 2;
+  width: 600px; /* Largura fixa do campo */
+  box-shadow: inset 0px 5px 15px rgba(0, 0, 0, 0.295);
+}
+
+.searchIcon {
+  width: 30px;
+  height: auto;
+  margin-right: 1%;
+  margin-left: 1%;
+}
+
+.search-bar input {
+  border: none;
+  outline: none;
+  width: 100%; /* Ocupa o espaço restante */
+}
+
+.style-textbar {
+  font-size: 1rem;
+  background-color: rgba(255, 255, 255, 0);
+  padding: 10px 10px;
+}
+
+/* Box de texto */
+.texthero {
+  position: absolute;
+  top: 68%;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 700px;
+  background: rgb(255, 255, 255); /* Fundo semitransparente */
+  padding: 20px 30px;
+  z-index: 2; /* Fica acima da imagem */
+  border-radius: 15px;
+  box-shadow: 0px 5px 1px #fec200;
+  & h1 {
+    text-align: center;
+    color: #292929;
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+}
+
+.perfil-container {
+  /*container principal com as informações de perfil*/
+  width: 100vw;
+  height: 75vh;
+  padding: 0 10dvw;
+  margin: auto 0;
+}
+.first-section {
+  /*primeira seção (com a foto d perfil e os dados pssoais)*/
+  display: flex;
+  & .imgs-profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 33.3%;
+    position: relative;
+  }
+  & #perfil {
+    /*imagem do veio*/
+    width: 70%;
+    height: calc(width 70%);
+    object-fit: cover;
+    min-width: 150px;
+    min-height: 150px;
+  }
+  & #camera {
+    /*icone da camera*/
+    position: absolute;
+    width: 15%;
+    height: auto;
+    left: 70%;
+    top: 70%;
+  }
+}
+.h2Tag {
+  /*Textos H2*/
+  color: #605353;
+  font-weight: 500;
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+.h3Tag {
+  /*Textos H3*/
+  color: #605353;
+  font-weight: 500;
+  margin-left: 20px;
+  font-size: 0.7rem;
+}
+.dados {
+  /*seção ao lado da foto do veio*/
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  padding-left: 20px;
+  & h1 {
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: #605353;
+    margin-bottom: 40px;
+  }
+}
+.dados-container {
+  /*Container com os dados: nome, numero, CEP e E-mail*/
+  gap: 15px 0;
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  & div {
+    color: #605353;
+    width: calc(50% - 10px);
+    overflow: hidden;
+    & div {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      height: 35px;
+      width: 100%;
+      border-radius: 50px;
+      border: thin solid #605353;
+    }
+  }
+}
+
+.locale-container {
+  /*seção de local*/
+  margin-top: 20px;
+  gap: 30px 0;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  & div {
+    /*Divs com as celulas de informação*/
+    overflow: hidden;
+    width: calc(33.3% - 10px);
+    & div {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      height: 35px;
+      width: 100%;
+      border-radius: 50px;
+      border: thin solid #605353;
+    }
+  }
+}
+
+.removeAccount {
+  /*Seção para encerra ou sair da conta*/
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  & img {
+    width: 24px;
+  }
+  & button {
+    /*Estilização dos dois botões*/
+    padding: 5px 10px;
+    border-radius: 40px;
+    min-width: 60px;
+    border: thin solid black;
+    color: whitesmoke;
+    background-color: black;
+    transition: background 0.3s;
+  }
+  & #Logout {
+    /*Botão "Sair"*/
+    margin: 0 0 0 auto;
+  }
+  & button:hover {
+    color: black;
+    background-color: transparent;
+    cursor: pointer;
+  }
+}
+
+/*pagina de cofirmção (empresa e pessoa fisica)*/
+
+.confirm-Sheet {
+  /*tela inteira*/
+  display: flex;
+  height: 100dvh;
+  & #slideImg {
+    margin: 0 auto 0 -10%;
+  }
+}
+.confirm-section {
+  /*seção com o formulario*/
+  margin: auto;
+  width: 50vw;
+  height: 80dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  & h1 {
+    /*Pessoa fisica / Empresa*/
+    font-weight: 600;
+    margin-bottom: 50px;
+  }
+  & #typeLog {
+    /*icone da pessoa / empresa*/
+    width: 50px;
+    height: auto;
+  }
+  & #logoConf {
+    /*logo inferior*/
+    width: 150px;
+    height: auto;
+  }
+  & .confirm-btn {
+    /*botão de confirmar*/
+    margin-top: 50px;
+    padding: 10px;
+    width: 30%;
+    border: thin solid #292929;
+    border-radius: 50px;
+    background-color: #292929;
+    transition: background 0.3s;
+    & a {
+      color: white;
+      text-decoration: none;
+      font-size: 1rem;
+    }
+  }
+}
+.confirm-btn:hover {
+  /*Animação do botão*/
+  cursor: pointer;
+  background-color: #29292993;
+  color: #292929;
+}
+
+.conf-dados-container {
+  /*Container com logo e formulario*/
+  display: flex;
+  flex-direction: column;
+  gap: 30px 0;
+  & input {
+    outline: none;
+    border: thin solid #605353;
+    padding: 8px 10px;
+    border-radius: 50px;
+  }
+}
+/*row1*/
+.row1 {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  & input {
+    width: calc(50% - 10px);
+  }
+}
+/*row2*/
+.row2 {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  & input {
+    width: calc(100% - 10px);
+  }
+  & #row2Acert {
+    margin: 0 0 0 auto;
+  }
+}
+/*row3*/
+.row3 {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px 20px;
+  & input {
+    width: 100%;
+  }
+}
+/*row4*/
+.row4 {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  & input {
+    width: calc(50% - 10px);
+  }
+}
+
+@media screen and (width <= 769px) {
+  /*header*/
+  .header-section {
+    height: 8dvh;
+    & .yelow-zone {
+      z-index: 3;
+      /*zona amarela*/
+      padding: 0 5dvw;
+      height: 100%;
+      & #logoImg {
+        /*logo*/
+        height: 100%;
+        width: auto;
+      }
+    }
+    & .nav-zone {
+      /*ocultando os links de navegação*/
+      display: none;
+    }
+  }
+
+  .perfil-container {
+    /*container principal*/
+    margin: 0 5dvw;
+    height: calc(100dvh - 8dvh);
+  }
+  .first-section {
+    /*seção com a foto e informações pessoais*/
+    padding-top: 3dvh;
+    flex-direction: column;
+    & .imgs-profile {
+      width: 100%;
+      & #perfil {
+        width: 40%;
+      }
+      & #camera {
+        /*icone da camera*/
+        width: 10%;
+        height: auto;
+        left: 60%;
+        top: 75%;
+      }
+    }
+    & .dados {
+      /*container com os dados: cpf tdc..*/
+      width: 100%;
+      padding: 0;
+      & h1 {
+        /*nome "Dados"*/
+        font-size: 1.3rem;
+        margin-bottom: 10px;
+      }
+      & .dados-container {
+        /*container como os dados*/
+        justify-content: space-between;
+        gap: 10px 0;
+        & div {
+          width: 48%;
+          & div {
+            /*celula*/
+            overflow: hidden;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+  .second-section {
+    /*segunda seção*/
+    margin-top: 5dvh;
+  }
+
+  .removeAccount {
+    /*container com os botões de sair e encerrar sessão*/
+    margin-top: 180px;
+  }
+
+  .h2Tag {
+    /*titulo da celula*/
+    font-size: 1rem;
+    margin-bottom: 5px;
+  }
+  .h3Tag {
+    /*conteudo da celula*/
+    margin-left: 5px;
+    white-space: nowrap;
+    font-size: 0.8rem;
+  }
+
+  /*CONFIRMAÇÃO*/
+
+  .confirm-Sheet {
+    margin: 0 5dvw;
+    & #slideImg {
+      display: none;
+    }
+    & .confirm-section {
+      width: 100%;
+    }
+
+    #logoConf {
+      width: 250px;
+      height: auto;
+      margin: auto 0 0 0;
+    }
+    /*rows*/
+    .row1 {
+      & input {
+        width: calc(50% - 5px);
+      }
+    }
+    .row2 {
+      & input {
+        width: calc(100% - 5px);
+      }
+    }
+    .row3 {
+      gap: 15px 5px;
+      & input {
+        width: calc(100% - 5px);
+      }
+    }
+    .row4 {
+      & input {
+        width: calc(50% - 5px);
+      }
+    }
+
+    .confirm-btn {
+      width: 60%;
+    }
+  }
+  .hero-section {
+    position: relative;
+    & .img-Hero {
+      height: 40%;
+    }
+    & .search-bar {
+      height: 40px;
+      top: 30px;
+      width: 70%;
+      & .searchIcon {
+        width: 24px;
+        height: auto;
+      }
+    }
+    & .texthero {
+      top: 35%;
+      width: 90%;
+      & h1 {
+        font-size: 0.9rem;
+      }
+    }
+  }
+  #perfilImg {
+    width: 46px;
+  }
+  #logoImg {
+    margin-left: -25px;
+  }
+}
+
+/* --------------------------------------------------------- CSS referente à página de confirmação -------------------------------------------------------------------- */
+
+body {
+  font-family: "Montserrat", Arial, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+  background-color: #ffffff;
+}
+
+.container {
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  box-sizing: border-box;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 15vw;
+  height: 15vh;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 4vh;
+}
+
+.icon i {
+  font-size: 18vh;
+}
+
+.title {
+  font-size: 3vw;
+  font-weight: 700;
+  color: #000000;
+  margin-bottom: 3vh;
+}
+
+.message {
+  font-size: 1.8vw;
+  font-weight: 400;
+  color: #333333;
+  margin-bottom: 5vh;
+  max-width: 60vw;
+}
+
+.button {
+  display: inline-block;
+  padding: 1.5vh 1vw;
+  font-size: 1.7vw;
+  width: 30vw;
+  font-weight: 700;
+  color: #000000;
+  background-color: #ffd700;
+  border: none;
+  outline: none;
+  border-radius: 40px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.button:hover {
+  background-color: #e0b800;
+}
+
+@media (max-width: 769px) {
+  .container {
+    width: 90%;
+    padding: 30px;
+  }
+
+  .title {
+    font-size: 5vw;
+    font-size: 4vh;
+  }
+
+  .message {
+    font-size: 3.4vw;
+    font-size: 3.2vh;
+  }
+
+  .button {
+    font-size: 3vw;
+    padding: 1vh 5vw;
+  }
+
+  .icon {
+    width: 10vh;
+    height: 20vw;
+  }
+
+  .icon i {
+    font-size: 20vh;
+    font-size: 20vw;
+  }
+}
+
+/* --------------------------------------------- CSS referente à primeira página de cadastro -------------------------------------------------------------------------- */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  background-color: #ffff;
+  overflow: hidden;
+}
+
+#exibicao {
+  /* Referente à section base de todos os elemtos */
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  flex-flow: row;
+}
+
+.img-placas {
+  /* Class referente à div onde se encontra a imagem ao lado do formulário */
+  width: 70%;
+  height: 100vh;
+}
+
+.img-placas img {
+  /* Referemte à imagem dentro da class "img-placas" */
+  height: 100%;
+  width: 100%;
+}
+
+.conteinerf {
+  /* Class referente à div que comporta a logo da empresa, as boas-vindas, conteiner do formulário e os elementos do formulário. Tudo isso à direita da tela. */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 6vh;
+  margin-left: 1vw;
+  margin-right: 5vw;
+  margin-top: 0;
+  padding: 0;
+  align-content: center;
+  height: 100vh;
+  width: 40%;
+}
+
+#logo {
+  /* Div que comporta a logo da empresa */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1vh;
+  height: 5vh;
+}
+
+#logo img {
+  /* Logo da empresa */
+  width: 9vw;
+}
+
+#boas-vindas {
+  /* Div que comporta a mensagem de boas-vindas */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+#boas-vindas h1 {
+  /* Mensagem de boas-vindas */
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 2.3vw;
+  justify-content: center;
+  text-align: center;
+  white-space: nowrap;
+}
+
+#conteinerform {
+  /* Div que comporta todos os elementos do formulário */
+  position: absolute;
+  width: 25%;
+  height: 75%;
+  margin-top: 14vh;
+  background-color: rgb(187, 187, 187);
+  border: 1px hidden;
+  border-radius: 20px;
+  box-shadow: 10px 10px 20px 5px rgba(0, 0, 0, 0.5);
+  align-items: center;
+  justify-content: center;
+}
+
+.form {
+  /* Formulário */
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  padding: 30px;
+  padding-top: 10px;
+}
+
+#conteinerform h2 {
+  /* Subtítulo do formulário */
+  text-align: center;
+  white-space: nowrap;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 2vw;
+}
+
+.box-user {
+  /* Class referente às div's que comportam os input's e seus ícones */
+  display: flex;
+  align-items: center;
+  gap: 1vw;
+  white-space: inherit;
+}
+
+.box-user i {
+  /* Formatação do ícone */
+  font-size: 1vw;
+}
+
+input {
+  /* Formatação direta nos input's */
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  border: 1px solid black;
+  border-radius: 20px;
+  background: transparent;
+  white-space: nowrap;
+  padding: 2vh;
+  width: 90%;
+  margin-bottom: 1vh;
+  margin-top: 2vh;
+}
+
+.submit {
+  /* Class da div que comporta os submit's */
+  display: flex;
+  height: 7vh;
+  margin: 2vh;
+  margin-top: 1vh;
+  margin-left: 2vw;
+  align-items: center;
+  justify-content: center;
+}
+
+.submit input[type="button"] {
+  /* Formatação direta nos submit's */
+  color: white;
+  border: 1px hidden;
+  height: 100%;
+  font-size: 1vw;
+  background-color: rgb(0, 0, 0);
+  width: 100%;
+  cursor: pointer;
+}
+
+.submit input:hover {
+  transition: 0.3s;
+  background-color: #383838;
+  color: #e9e9e9;
+}
+
+.submit a {
+  width: 100%;
+}
+
+.link {
+  /* Div que comporta o link "Esqueceu a senha?" */
+  padding-top: 1vh;
+  font-size: 0.8vw;
+}
+
+.link a {
+  /* Formatação direta no link */
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  white-space: nowrap;
+  color: black;
+  cursor: pointer;
+}
+
+.ou {
+  /* Formatacões com a class ".ou" são referentes ao elemento ------ou----- no formulário*/
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  font-size: 1vw;
+}
+
+.ou::before,
+.ou::after {
+  content: "";
+  flex: 1;
+  border-bottom: 1px solid #000;
+}
+
+.ou::before {
+  margin-right: 10px;
+}
+
+.ou::after {
+  margin-left: 10px;
+}
+
+#google {
+  /* Div que comporta a logo do Google juntamente com o link*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 30%;
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+}
+
+#google img {
+  /* Formatacões direta na imagem da logo do Google*/
+  display: block;
+  max-width: 4vw;
+  max-height: 6vh;
+  border: none;
+}
+
+#google a {
+  /* Formatacões direta no link presente na imagem da logo do Google*/
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.nao-tem-conta {
+  /* Formatacões com a class ".não-tem-conta" são referentes ao elemento -----Não tem uma conta----- no formulário */
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  white-space: nowrap;
+  font-size: 1vw;
+}
+
+.nao-tem-conta::before,
+.nao-tem-conta::after {
+  content: "";
+  flex: 1;
+  border-bottom: 1px solid #000;
+}
+
+.nao-tem-conta::before {
+  margin-right: 10px;
+}
+
+.nao-tem-conta::after {
+  margin-left: 10px;
+}
+
+@media (max-width: 769px) {
+  #exibicao {
+    display: flex;
+    background-image: url("../assets/images/photos/img-placas-completa.jpeg"); /* Substitua pelo caminho da imagem */
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+  }
+
+
+
+  .img-placas {
+    display: none; /* Remove a div original da imagem */
+  }
+
+  .conteinerf {
+    display: flex;
+    flex-direction: column;
+    flex: 1 100%;
+  }
+
+  #conteinerform {
+    width: 80%; /* Largura quase total */
+    height: auto; /* Ajusta altura automaticamente */
+    margin-top: 10dvh;
+    background: rgba(173, 173, 173, 0.856); /* Cor com transparência */
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5); /* Adiciona sombra */
+  }
+
+  #conteinerform h2 {
+    font-size: 4vw; /* Reduz tamanho do subtítulo */
+  }
+
+  .box-user i {
+    font-size: 3vw; /* Ajusta tamanho dos ícones */
+  }
+
+  input {
+    font-size: 1vw; /* Ajusta tamanho do texto nos inputs */
+    width: 100%;
+    height: 30%;
+  }
+
+  .submit input[type="button"] {
+    font-size: 2vw; /* Ajusta tamanho do texto nos botões */
+    width: 100%;
+  }
+
+  .link {
+    font-size: 2vw; /* Ajusta tamanho da fonte do link */
+  }
+
+  .ou {
+    font-size: 3vw; /* Ajusta tamanho do texto "ou" */
+  }
+
+  .nao-tem-conta {
+    font-size: 2vw; /* Ajusta texto "não tem conta" */
+  }
+
+  #google img {
+    max-width: 12vw; /* Ajusta tamanho do ícone do Google */
+    max-height: 8vh;
+  }
+}
+
+/* ---------------------------- CSS referente à página de cadastro de tipo de pessoa ( física ou jurídica ) ------------------------------------- */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  background-color: #ffff;
+  overflow: hidden;
+}
+
+#exibicao2 {
+  /* Referente à section base de todos os elemtos */
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  flex-flow: row;
+}
+
+.img-placas2 {
+  /* Class referente à div onde se encontra a imagem ao lado do formulário */
+  width: 70%;
+  height: 100vh;
+}
+
+.img-placas2 img {
+  /* Referemte à imagem dentro da class "img-placas" */
+  height: 100%;
+  width: 100%;
+}
+
+.conteinerf2 {
+  /* Class referente à div que comporta a logo da empresa, as boas-vindas, conteiner do formulário e os elementos do formulário. Tudo isso à direita da tela. */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 6vh;
+  margin-left: 1vw;
+  margin-right: 5vw;
+  margin-top: 0;
+  padding: 0;
+  align-content: center;
+  height: 100vh;
+  width: 40%;
+}
+
+#logo2 {
+  /* Div que comporta a logo da empresa */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1vh;
+  height: 5vh;
+}
+
+#logo2 img {
+  /* Logo da empresa */
+  width: 9vw;
+}
+
+#boas-vindas2 {
+  /* Div que comporta a mensagem de boas-vindas */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+#boas-vindas2 h1 {
+  /* Mensagem de boas-vindas */
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 2.3vw;
+  justify-content: center;
+  text-align: center;
+  white-space: nowrap;
+}
+
+#conteinerform2 {
+  /* Div que comporta todos os elementos do formulário */
+  position: absolute;
+  width: 25%;
+  height: 75%;
+  margin-top: 14vh;
+  background-color: rgb(187, 187, 187);
+  border: 1px hidden;
+  border-radius: 20px;
+  box-shadow: 10px 10px 20px 5px rgba(0, 0, 0, 0.5);
+  align-items: center;
+  justify-content: center;
+}
+
+.form2 {
+  /* Formulário */
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  padding: 30px;
+  padding-top: 10px;
+}
+
+#conteinerform2 h2 {
+  /* Subtítulo do formulário */
+  text-align: center;
+  white-space: nowrap;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 2vw;
+}
+
+.box-user2 {
+  /* Class referente às div's que comportam os input's e seus ícones */
+  display: flex;
+  align-items: center;
+  gap: 1vw;
+  white-space: inherit;
+}
+
+.box-user2 i {
+  /* Formatação do ícone */
+  font-size: 1vw;
+}
+
+input {
+  /* Formatação direta nos input's */
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  border: 1px solid black;
+  border-radius: 20px;
+  background: transparent;
+  white-space: nowrap;
+  padding: 2vh;
+  width: 90%;
+  margin-bottom: 1vh;
+  margin-top: 2vh;
+}
+
+.submit2 {
+  /* Class da div que comporta os submit's */
+  display: flex;
+  height: 7vh;
+  margin: 2vh;
+  margin-top: 1vh;
+  margin-left: 2vw;
+  align-items: center;
+  justify-content: center;
+}
+
+.submit2 input[type="submit"] {
+  /* Formatação direta nos submit's */
+  color: white;
+  border: 1px hidden;
+  height: 100%;
+  font-size: 1vw;
+  background-color: rgb(0, 0, 0);
+  width: 100%;
+  cursor: pointer;
+}
+
+.submit2 input:hover {
+  transition: 0.3s;
+  background-color: #000000;
+  color: #e9e9e9;
+}
+
+.submit2 a {
+  width: 100%;
+}
+
+.submit2 input:hover {
+  transition: 0.3s;
+  background-color: #000000;
+  color: #e9e9e9;
+}
+
+.submit2 a {
+  width: 100%;
+}
+
+.link2 {
+  /* Div que comporta o link "Esqueceu a senha?" */
+  padding-top: 1vh;
+  font-size: 0.8vw;
+}
+
+.link2 a {
+  /* Formatação direta no link */
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  white-space: nowrap;
+  color: black;
+  cursor: pointer;
+}
+
+.ou2 {
+  /* Formatacões com a class ".ou" são referentes ao elemento ------ou----- no formulário*/
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  font-size: 1vw;
+}
+
+.ou2::before,
+.ou2::after {
+  content: "";
+  flex: 1;
+  border-bottom: 1px solid #000;
+}
+
+.ou2::before {
+  margin-right: 10px;
+}
+
+.ou2::after {
+  margin-left: 10px;
+}
+
+#google2 {
+  /* Div que comporta a logo do Google juntamente com o link*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 30%;
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+}
+
+#google2 img {
+  /* Formatacões direta na imagem da logo do Google*/
+  display: block;
+  max-width: 4vw;
+  max-height: 6vh;
+  border: none;
+}
+
+#google2 a {
+  /* Formatacões direta no link presente na imagem da logo do Google*/
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.nao-tem-conta2 {
+  /* Formatacões com a class ".não-tem-conta" são referentes ao elemento -----Não tem uma conta----- no formulário */
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  white-space: nowrap;
+  font-size: 1vw;
+}
+
+.nao-tem-conta2::before,
+.nao-tem-conta2::after {
+  content: "";
+  flex: 1;
+  border-bottom: 1px solid #000;
+}
+
+.nao-tem-conta2::before {
+  margin-right: 10px;
+}
+
+.nao-tem-conta2::after {
+  margin-left: 10px;
+}
+
+.blur2 {
+  /* Refente à div responsável pelo efeito embaçado ao fundo */
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.3); /* Cor com transparência */
+  backdrop-filter: blur(5px); /* Aplicação do efeito embaçado */
+  z-index: 9999; /* Garante que o overlay esteja no topo */
+}
+
+.conteiner-no-blur2 {
+  /* Referente à div que abriga o formulário que está acima do efeito embaçado */
+  z-index: 10000;
+  border: 1px hidden;
+  box-shadow: 10px 10px 20px 5px rgba(0, 0, 0, 0.5);
+  border-radius: 30px;
+  background-color: white;
+  width: 20%;
+  height: 55%;
+  padding: 20px;
+}
+
+.form-no-blur2 {
+  /* Div que abriga todos os elementos dentro da div acima*/
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  padding: 20px;
+}
+
+.elementos2 {
+  /* Div que abriga todos os elementos dentro da div acima */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+#titulo2 {
+  /* Div que abriga o título "Cadastro" */
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 1vh;
+  margin-bottom: 7vh;
+}
+
+#titulo2 h1 {
+  /* Formatação direta no título*/
+  text-align: center;
+  white-space: nowrap;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 2.5vw;
+}
+
+.button-pessoa2 {
+  /* lass referente à div que abriga os botôes*/
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 1.5vh;
+  gap: 1vw;
+  width: 100%;
+  height: 40%;
+}
+
+.button-pessoa2 input {
+  /* Formatação direta aos input's das div's */
+  cursor: pointer;
+  border-radius: 90px;
+  background-color: #000000;
+  border: 1px hidden;
+  color: #ffffff;
+}
+
+.button-pessoa2 input:hover {
+  /* Formatação direta aos input's das div's */
+  background-color: #16161693;
+  color: #ffff;
+  transition: 0.3s;
+}
+
+.button-pessoa2 i {
+  /* Formatação direta aos ícones ao lado dos input's */
+  font-size: 1.2vw;
+}
+
+.button-pessoa2 input[value="Pessoa Física"] {
+  /* Formatações diretas aos input's das div's para modificação no tamanho das fontes */
+  font-size: 1vw;
+} /* Formatação direta aos input's das div's para modificação no tamanho das fontes */
+.button-pessoa2 input[value="Pessoa Jurídica"] {
+  font-size: 1vw;
+}
+
+.button-pessoa2 a {
+  width: 100%;
+}
+
+.button-pessoa2 a {
+  width: 100%;
+}
+
+.icon-x2 {
+  /* Class da div que abriga o ícone "x" */
+  display: flex;
+  justify-content: end;
+  width: 100%;
+  height: 5%;
+}
+
+.icon-x2 i {
+  /* Formatação direta no ícone */
+  font-size: 3vh;
+  cursor: pointer;
+}
+
+.icon-x2 a {
+  color: #000;
+}
+
+.icon-x2 a {
+  color: #000;
+}
+
+.img-logo2 {
+  /* Class referente à div que comporta a logo da empresa na parte inferior do formulário*/
+  margin-top: 4vh;
+}
+
+.img-logo2 img {
+  /* Formatação direta na imagem de logo da empresa*/
+  height: 100%;
+  width: 100%;
+}
